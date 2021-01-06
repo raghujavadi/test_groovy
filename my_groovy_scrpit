@@ -1,7 +1,7 @@
 Job (“my_groovy_sample_job”) {
     scm {
         git(“https://github.com/raghujavadi/test_groovy.git”, “master”)
-    }
+        }
     Trigger {
         scm(“* * * * *”)
     }
