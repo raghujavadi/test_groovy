@@ -1,0 +1,15 @@
+Job (“my_groovy_sample_job”) {
+    description(“first groovy script, please build it success ${new Date()}”)
+    scm {
+        git (“ https://github.com/raghujavadi/test_groovy.git”, “master”)
+    }
+    Trigger {
+        scm(“* * * * *”)
+    }
+    steps {
+        maven(“clean package”, “my_groovy_scrpit”)
+    }
+    Publisher {
+        archiveAtrifact “**/*.jar”
+    }
+}
