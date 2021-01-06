@@ -1,5 +1,4 @@
 Job (“my_groovy_sample_job”) {
-    description(“first groovy script, please build it success”)
     scm {
         git (“ https://github.com/raghujavadi/test_groovy.git”, “master”)
     }
